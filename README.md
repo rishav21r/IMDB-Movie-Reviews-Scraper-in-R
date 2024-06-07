@@ -96,3 +96,26 @@ View(all_reviews)
 
 ### Running the Script
 To run the script, open `scrape_reviews.R` in RStudio or any R environment and execute the code. The reviews will be saved in the `data/` directory as imdbreviews_thelionking1994.csv.
+
+### Limitations
+- **JavaScript Dependency:** The script relies on the presence of the "load more" button to fetch additional reviews. If IMDB changes its website structure or removes the "load more" button, the script may fail to retrieve additional reviews.
+
+- **Network and Load Time:** Depending on network speed and server load, the script might face timeouts or delays in loading pages, which can affect its performance and completeness of data collection.
+
+- **Static URL Requirement:** The script requires a static URL for the initial page. If the URL structure changes or if the movie page requires specific session-based tokens, the script may need adjustments.
+
+- **Handling Captchas:** If IMDB implements CAPTCHA challenges to prevent automated scraping, the script will not be able to bypass these, halting the data collection process.
+
+- **Review Data Quality:** The script handles missing values by filling them with "NA," which might not always be the best approach. Further data cleaning and validation may be required based on the analysis needs.
+
+- **Rate Limiting:** Frequent requests to the IMDB server could trigger rate limiting or IP blocking, which would interrupt the scraping process.
+
+- **Scalability:** While the script works for a specified number of pages, scraping a very large number of reviews (e.g., thousands of pages) might require more robust error handling, logging, and possibly distributed computing solutions.
+
+- **Data Parsing:** The script assumes a consistent format for reviews. If the HTML structure of reviews changes, the script's parsing logic will need updates.
+
+- **Session Management:** The script does not handle session management or cookies, which might be necessary for scraping certain dynamic content beyond what is managed by the "load more" button.
+
+- **No Real-Time Updates:** The script captures reviews available at the time of execution. It does not provide a mechanism for ongoing updates or tracking new reviews over time.
+
+- **Limited Error Handling:** The script has basic error handling. In case of unexpected errors (e.g., network issues, changes in webpage structure), the script may stop running without providing detailed diagnostic information.
