@@ -1,8 +1,6 @@
 # IMDB Movie Reviews Scraper with R
 This repository contains an R script to scrape movie reviews from IMDB. The script is designed to load any number of pages of reviews as specified by the user for any movie they are interested in. The example provided scrapes reviews for "The Lion King (1994)".
 
-This repository contains an R script to scrape movie reviews from IMDB. The script is designed to load any number of pages of reviews as specified by the user for any movie they are interested in. The example provided scrapes reviews for "The Lion King (1994)".
-
 On the IMDB website, reviews are not loaded all at once; instead, only 25 reviews are present on the first page. To access more reviews, a user must click the "load more" button to fetch the next set of 25 reviews. This process is repeated for each subsequent set of reviews, making manual scraping tedious and time-consuming.
 
 This script automates the process of loading multiple pages to collect a comprehensive set of review data. By programmatically handling the "load more" button, it ensures that all reviews are captured without manual intervention. The script effectively deals with the dynamic content loading implemented via JavaScript on the IMDB site, a task that can be challenging to manage manually.
